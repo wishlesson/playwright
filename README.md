@@ -1,4 +1,4 @@
-# Project Title
+# Test Automation using Playwright
 
 This is a sample playwright project for educational purpose.
 
