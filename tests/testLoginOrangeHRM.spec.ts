@@ -9,14 +9,11 @@ test("has title", async ({ page }) => {
   await expect(page).toHaveTitle(/OrangeHRM/);
 });
 
-/* test("get started link", async ({ page }) => {
-  await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+test("Login Form", async ({ page }) => {
+  await page.goto(
+    "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+  );
 
   // Click the get started link.
-  await page.getByRole("link", { name: "Get started" }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(
-    page.getByRole("heading", { name: "Installation" })
-  ).toBeVisible();
-}); */
+  expect(page.getByRole("heading", { name: "Login" })).toBeVisible;
+});
